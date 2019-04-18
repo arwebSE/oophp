@@ -1,0 +1,55 @@
+.gameWrapper,
+pre {
+    height: 1%;
+    width: auto;
+    display: block;
+    clear: both;
+    color: #555;
+    padding: 1rem !important;
+    margin: 0.5rem 40px;
+    line-height: 1.2rem;
+    font-family: Monaco, Consolas, monospace;
+    border: none !important;
+    background-color: #f6f8fa;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    font-size: 90%;
+}
+
+:focus {
+    outline: none !important;
+}
+
+.gameWrapper input {
+    border: none;
+    background-color: #aaa;
+    border-radius: 3px;
+    padding: 0.5rem;
+    color: white;
+}
+
+.gameWrapper input[type="submit"]:hover {
+    background-color: #444;
+}
+
+.gameWrapper input[type="submit"]:active {
+    background-color: #333;
+}
+
+.gameWrapper input[type="text"] {
+    background-color: white;
+}
+
+.gameWrapper input[type="text"]::placeholder {
+    color: #fefefe;
+}
+
+.gameWrapper input[type="text"]:focus {
+    background-color: #ddd;
+    color: #111;
+}
