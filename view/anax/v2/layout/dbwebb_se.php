@@ -211,7 +211,7 @@ $route = "route-" . str_replace("/", "-", $di->get("request")->getRoute());
 $sidebarLeft  = regionHasContent("sidebar-left");
 $sidebarRight = regionHasContent("sidebar-right");
 $class = "";
-$class .= $sidebarLeft  ? "has-sidebar-left "  : "";
+$class .= $sidebarLeft ? "has-sidebar-left " : "";
 $class .= $sidebarRight ? "has-sidebar-right " : "";
 $class .= empty($class) ? "" : "has-sidebar";
 ?>

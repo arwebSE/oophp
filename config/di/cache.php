@@ -8,7 +8,7 @@ return [
     "services" => [
         "cache" => [
             "shared" => true,
-            "callback" => function () {
+            "callback" => function() {
                 $cache = new \Anax\Cache\FileCache();
 
                 // Load the configuration files

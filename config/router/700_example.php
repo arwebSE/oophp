@@ -13,7 +13,7 @@ return [
             "info" => "Just say hi with a string.",
             "method" => null,
             "path" => "hi",
-            "handler" => function () {
+            "handler" => function() {
                 //echo "Ho";
                 return "Hi.";
             },

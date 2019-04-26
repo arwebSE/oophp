@@ -6,7 +6,7 @@ return [
     "services" => [
         "router" => [
             "shared" => true,
-            "callback" => function () {
+            "callback" => function() {
                 $router = new \Anax\Route\Router();
                 $router->setDI($this);
 
