@@ -24,10 +24,10 @@ define("ANAX_WITH_SESSION", true);
 error_reporting(-1); // Report all type of errors
 //error_reporting(E_ALL ^ E_DEPRECATED);  // Report no deprecated errors
 if (constant("ANAX_DEVELOPMENT")) {
-    ini_set("display_errors", 1);  // Display all errors
+    ini_set("display_errors", 1); // Display all errors
 } elseif (constant("ANAX_PRODUCTION")) {
-    ini_set("display_errors", 0);  // Display no errors
-    ini_set("log_errors", 1);      // Log errors to file error_log
+    ini_set("display_errors", 0); // Display no errors
+    ini_set("log_errors", 1); // Log errors to file error_log
     ini_set("error_log", ANAX_INSTALL_PATH . "/log/error_log");
 }
 
@@ -36,7 +36,7 @@ if (constant("ANAX_DEVELOPMENT")) {
 /**
  * Default exception handler.
  */
-set_exception_handler(function ($e) {
+set_exception_handler(function($e) {
     echo "<p>Anax: Uncaught exception:</p><p>Line "
         . $e->getLine()
         . " in file "

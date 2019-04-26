@@ -6,7 +6,7 @@ return [
     "services" => [
         "url" => [
             "shared" => true,
-            "callback" => function () {
+            "callback" => function() {
                 $url = new \Anax\Url\Url();
                 $request = $this->get("request");
                 $url->setSiteUrl($request->getSiteUrl());

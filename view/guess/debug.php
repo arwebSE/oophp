@@ -20,14 +20,14 @@ console.log("cbod:", bod); */
 
 <hr>
 <pre class="prettyprint">
-<?php echo var_dump($_SESSION);?>
+<?php echo var_dump($_SESSION); ?>
 </pre>
 
 <pre class="prettyprint">
-<?php echo var_dump($_POST);?>
+<?php echo var_dump($_POST); ?>
 </pre>
 
 <pre class="prettyprint">
-<?php echo var_dump($_GET);?>
+<?php echo var_dump($_GET); ?>
 </pre>
 <hr>

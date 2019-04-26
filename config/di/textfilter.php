@@ -6,7 +6,7 @@ return [
     "services" => [
         "textfilter" => [
             "shared" => true,
-            "callback" => function () {
+            "callback" => function() {
                 $filter = new \Anax\TextFilter\TextFilter();
                 if (is_dir(ANAX_INSTALL_PATH . "/content")) {
                     $filter->setFilterConfig("frontmatter", [

@@ -11,7 +11,7 @@
 /**
  * Custom exception handler.
  */
-set_exception_handler(function ($exception) {
+set_exception_handler(function($exception) {
     errorPage(
         "<p><b>img.php: Uncaught exception:</b> <p>"
         . $exception->getMessage()
@@ -28,7 +28,7 @@ set_exception_handler(function ($exception) {
  * Get configuration options from file, if the file exists, else use $config
  * if its defined or create an empty $config.
  */
-$configFile = __DIR__.'/'.basename(__FILE__, '.php').'_config.php';
+$configFile = __DIR__ . '/' . basename(__FILE__, '.php') . '_config.php';
 
 if (is_file($configFile)) {
     $config = require $configFile;
@@ -404,7 +404,7 @@ verbose("src = $srcImage");
  * Manage size constants from config file, use constants to replace values
  * for width and height.
  */
-$sizeConstant = getConfig('size_constant', function () {
+$sizeConstant = getConfig('size_constant', function() {
 
     // Set sizes to map constant to value, easier to use with width or height
     $sizes = array(
@@ -440,7 +440,7 @@ if (isset($sizes[$newWidth])) {
 }
 
 // Support width as % of original width
-if ($newWidth[strlen($newWidth)-1] == '%') {
+if ($newWidth[strlen($newWidth) - 1] == '%') {
     is_numeric(substr($newWidth, 0, -1))
         or errorPage('Width % not numeric.', 404);
 } else {
@@ -465,7 +465,7 @@ if (isset($sizes[$newHeight])) {
 }
 
 // height
-if ($newHeight[strlen($newHeight)-1] == '%') {
+if ($newHeight[strlen($newHeight) - 1] == '%') {
     is_numeric(substr($newHeight, 0, -1))
         or errorPage('Height % out of range.', 404);
 } else {
@@ -482,14 +482,14 @@ verbose("new height = $newHeight");
  * aspect-ratio, ar - affecting the resulting image width, height and resize options
  */
 $aspectRatio         = get(array('aspect-ratio', 'ar'));
-$aspectRatioConstant = getConfig('aspect_ratio_constant', function () {
+$aspectRatioConstant = getConfig('aspect_ratio_constant', function() {
     return array(
-        '3:1'    => 3/1,
-        '3:2'    => 3/2,
-        '4:3'    => 4/3,
-        '8:5'    => 8/5,
-        '16:10'  => 16/10,
-        '16:9'   => 16/9,
+        '3:1'    => 3 / 1,
+        '3:2'    => 3 / 2,
+        '4:3'    => 4 / 3,
+        '8:5'    => 8 / 5,
+        '16:10'  => 16 / 10,
+        '16:9'   => 16 / 9,
         'golden' => 1.618,
     );
 });
@@ -568,7 +568,7 @@ verbose("fill-to-fit = $fillToFit");
 if ($fillToFit !== null) {
 
     if (!empty($fillToFit)) {
-        $bgColor   = $fillToFit;
+        $bgColor = $fillToFit;
         verbose("fillToFit changed bgColor to = $bgColor");
     }
 

@@ -7,7 +7,7 @@ return [
     "services" => [
         "request" => [
             "shared" => true,
-            "callback" => function () {
+            "callback" => function() {
                 $obj = new \Anax\Request\Request();
                 $obj->init();
                 return $obj;

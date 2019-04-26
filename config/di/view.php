@@ -7,7 +7,7 @@ return [
         "view" => [
             "active" => false,
             "shared" => true,
-            "callback" => function () {
+            "callback" => function() {
                 $view = new \Anax\View\ViewCollection();
                 $view->setDI($this);
 

@@ -21,7 +21,7 @@ if (isset($contentRoute)) {
 }
 
 // Prepare title
-$title = isset($title) && !empty($title)? $title : null;
+$title = isset($title) && !empty($title) ? $title : null;
 $header = isset($header) ? $header : $title;
 
 // Prepare content into text
