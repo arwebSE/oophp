@@ -8,7 +8,7 @@ return [
     "services" => [
         "content" => [
             "shared" => true,
-            "callback" => function() {
+            "callback" => function () {
                 $content = new \Anax\Content\FileBasedContent();
                 $content->setDI($this);
 

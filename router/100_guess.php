@@ -4,26 +4,21 @@
  */
 //var_dump(array_keys(get_defined_vars()));
 
-if (!isset($_SESSION["game"])) {
-    $_SESSION["game"] = new ARWeb\Guess\Guess();
-}
-
 /**
  * Init the game and redirect to play the game.
  */
-$app->router->get("guess/init", function() use ($app) {
-    // init the session for the game start.
-    destroySession();
-    session_start();
+$app->router->get("guess/init", function () use ($app) {
     $_SESSION["game"] = new ARWeb\Guess\Guess();
-    $game = $_SESSION["game"];
+    $new = new ARWeb\Guess\Guess();
+    $app->session->set("game", $new);
+    $game = $app->session->get("game");
     return $app->response->redirect("guess/play");
 });
 
 /**
  * Play the game - show game status.
  */
-$app->router->get("guess/play", function() use ($app) {
+$app->router->get("guess/play", function () use ($app) {
     $title = "Play the game";
 
     // Pass session data to var
@@ -59,7 +54,7 @@ $app->router->get("guess/play", function() use ($app) {
 /**
  * Play the game - make a guess.
  */
-$app->router->post("guess/play", function() use ($app) {
+$app->router->post("guess/play", function () use ($app) {
     $title = "Play the game";
 
     // POST vars

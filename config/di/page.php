@@ -8,7 +8,7 @@ return [
     "services" => [
         "page" => [
             "shared" => true,
-            "callback" => function() {
+            "callback" => function () {
                 $page = new \Anax\Page\Page();
                 $page->setDI($this);
 

@@ -16,21 +16,21 @@ return [
         [
             "info" => "Just say hi with a string.",
             "path" => "hi",
-            "handler" => function() {
+            "handler" => function () {
                 return "Hi.";
             },
         ],
         [
             "info" => "Say No! with status code 500.",
             "path" => "no",
-            "handler" => function() {
+            "handler" => function () {
                 return ["No!", 500];
             },
         ],
         [
             "info" => "Say Hi through JSON.",
             "path" => "json",
-            "handler" => function() {
+            "handler" => function () {
                 return [["message" => "Hi JSON"]];
             },
         ],
@@ -47,28 +47,28 @@ return [
         [
             "info" => "Throw standard exception.",
             "path" => "exception",
-            "handler" => function() {
+            "handler" => function () {
                 throw new \Exception("Standard \Exception");
             },
         ],
         [
             "info" => "Try internal 403.",
             "path" => "403",
-            "handler" => function() {
+            "handler" => function () {
                 throw new ForbiddenException("Detailed error message.");
             },
         ],
         [
             "info" => "Try internal 404.",
             "path" => "404",
-            "handler" => function() {
+            "handler" => function () {
                 throw new NotFoundException("Detailed error message.");
             },
         ],
         [
             "info" => "Try internal 500.",
             "path" => "500",
-            "handler" => function() {
+            "handler" => function () {
                 throw new InternalErrorException("Detailed error message.");
             },
         ],

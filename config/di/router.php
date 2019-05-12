@@ -6,7 +6,7 @@ return [
     "services" => [
         "router" => [
             "shared" => true,
-            "callback" => function() {
+            "callback" => function () {
                 $router = new \Anax\Route\Router();
                 $router->setDI($this);
 
@@ -18,7 +18,7 @@ return [
                 $mode = $config["config"]["mode"] ?? null;
                 if (isset($mode)) {
                     $router->setMode($mode);
-                } else if (defined("ANAX_PRODUCTION")) {
+                } elseif (defined("ANAX_PRODUCTION")) {
                     $router->setMode(\Anax\Route\Router::PRODUCTION);
                 }
 

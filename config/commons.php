@@ -36,7 +36,7 @@ if (constant("ANAX_DEVELOPMENT")) {
 /**
  * Default exception handler.
  */
-set_exception_handler(function($e) {
+set_exception_handler(function ($e) {
     echo "<p>Anax: Uncaught exception:</p><p>Line "
         . $e->getLine()
         . " in file "
